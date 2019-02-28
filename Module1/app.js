@@ -1,28 +1,39 @@
 (function () {
-'use strict';
+	'use strict';
 
-angular.module('NameCalculator', [])
+	angular.module('lunchCheck', [])
+	.controller('LunchCheckController', LunchCheckController);
 
-.controller('NameCaculatorController', function ($scope) {
-  $scope.name = "";
-  $scope.totalValue = 0;
+	LunchCheckController.$inject = ['$scope'];
+	function LunchCheckController ($scope) {
+	$scope.LunchNormal = '';
+	$scope.lunchResponder = '';
 
-  $scope.displayNumeric = function () {
-    var totalNameValue = calculatNumericForString($scope.name);
-    $scope.totalValue = totalNameValue;
-  };
+	$scope.ItemCounter = function countArray (items) {
+		var itemArray = [];
+		var lunchCounts = 0;
+		if (items.trim() !== '' && items !== null && items !== undefined) {
+			itemArray = items.split(',');
+			for (var item in itemArray) {
+				if (itemArray[item].trim().length > 0){
+					lunchCounts += 1;
+				}
+			}
+		}
 
+		return lunchCounts; 
+	};
 
-  function calculatNumericForString(string) {
-    var totalStringValue = 0;
-    for (var i = 0; i < string.length; i++) {
-      totalStringValue += string.charCodeAt(i);
-    }
-
-    return totalStringValue;
-  }
-
-});
-
-
+	$scope.FoodResponse = function CheckItemNumb () {
+		var NumberofItems = $scope.ItemCounter($scope.LunchNormal);
+		var returnMessage = 'Please Enter Data First';
+		if (NumberofItems > 0 && NumberofItems <=3) {
+			returnMessage = 'Enjoy!';
+		}
+		else if (NumberofItems > 3) {
+			returnMessage = 'Too Much!';
+		}
+		$scope.lunchResponder = returnMessage;
+	};
+};
 })();
