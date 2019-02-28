@@ -2,10 +2,10 @@
 	'use strict';
 
 	angular.module('lunchCheck', [])
-	.controller('LunchCheckController', LunchCheckController);
+	.controller('LunchCheckController', LunchCheck);
 
-	LunchCheckController.$inject = ['$scope'];
-	function LunchCheckController ($scope) {
+	LunchCheck.$inject = ['$scope'];
+	function LunchCheck ($scope) {
 	$scope.LunchNormal = '';
 	$scope.lunchResponder = '';
 
