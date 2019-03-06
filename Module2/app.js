@@ -25,7 +25,7 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 // 			return true;
 // 		else 
 // 			return false;	
-// 	};
+	};
 };
 
 function ShoppingListCheckOffService () {
