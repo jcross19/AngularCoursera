@@ -60,9 +60,9 @@ function ShoppingListCheckOffService () {
 	}
 	service.getToBuyItems = function () {
 		return toBuyItems;
-	};
+	}
 	service.getBoughtItems = function () {
 		return boughtItems;
-	};
+	}
 }	
 })();
