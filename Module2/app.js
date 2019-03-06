@@ -21,7 +21,7 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 	boughtController.boughtItems = ShoppingListCheckOffService.getBoughtItems;
 	boughtController.emptyCheck = function ($index) {
 		var message = "Nothing Bought Yet!"
-		if (boughtController.boughtItems == 0)
+		if (boughtController.boughtItems.length == 0)
 			return message;
 // 		return (boughtController.boughtItems.length == "0") 
 // 		if (ShoppingListCheckOffService.getBoughtLength == 0)
