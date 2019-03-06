@@ -54,14 +54,14 @@ function ShoppingListCheckOffService () {
 				]
 	var boughtItems = [];
 
-	service.doBuy = function (index) {
+	this.doBuy = function (index) {
 		boughtItems.push(toBuyItems[index]);
 		toBuyItems.splice(index, 1);
 	}
-	service.getToBuyItems = function () {
+	this.getToBuyItems = function () {
 		return toBuyItems;
 	}
-	service.getBoughtItems = function () {
+	this.getBoughtItems = function () {
 		return boughtItems;
 	}
 }	
