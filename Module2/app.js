@@ -25,8 +25,7 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 // 		else 
 // 			return false;};
 	boughtController.message = function () {
-		if (boughtController.boughtItems === 0)
-			return "Nothing Bought Yet!"
+		return ("boughtController.boughtItems.length === 0")
 	};
 };
 
