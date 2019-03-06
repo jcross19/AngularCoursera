@@ -20,8 +20,9 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 	var boughtController = this;
 	boughtController.boughtItems = ShoppingListCheckOffService.getBoughtItems;
 	boughtController.messageCheck = function () {
-		if (boughtController.boughtItems.length == 0)
-			return true;
+		return (boughtController.boughtItems.length == 0)
+// 		if (boughtController.boughtItems.length == 0)
+// 			return true;
 	};
 };
 
