@@ -24,9 +24,9 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 // 		return true;
 // 		else 
 // 			return false;};
-	boughtController.message = function () {
-		return ("boughtController.boughtItems.length === 0")
-	};
+// 	boughtController.message = function () {
+// 		return ("boughtController.boughtItems.length === 0")
+// 	};
 };
 
 function ShoppingListCheckOffService () {
