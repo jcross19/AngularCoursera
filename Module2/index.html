@@ -40,7 +40,7 @@
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController as isBought">
+    <div class="col-md-6" ng-controller="ListAlreadyBoughtController as isBought">
      <h2>Already Bought:</h2>
      <ul>
        <li ng-repeat="item in isBought.itemsBought"> {{item.quantity}} {{item.name}}</li>
