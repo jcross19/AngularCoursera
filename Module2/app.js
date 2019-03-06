@@ -22,8 +22,6 @@ function ListAlreadyBoughtController(ShoppingListCheckOffService) {
 	boughtController.checkIfEmpty = function () {
 		if (boughtController.boughtItems.length === 0);
 		return true
-		else
-			return false
 	};
 };
 
